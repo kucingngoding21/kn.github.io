@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar {
+            padding: 1rem 2rem;
+            position: relative;
+            margin-right: 20px; /* Atur jarak yang diinginkan */
+        }
+        .navbar::after {
+        content: '';
+        position: absolute;
+        bottom: 0; /* Align to the bottom of the navbar */
+        left: 50%; /* Start from the center of the navbar */
+        transform: translateX(-50%); /* Center the border */
+        width: 96%; /* Adjust to match the design's border width */
+        height: 1px; /* Height of the border */
+        background-color: #000; /* Color of the border */
+        }
+        .navbar-brand {
+            font-size: 1.5rem; 
+        }
+        .navbar-nav {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav-item {
+        margin-right: 20px;
+        border-right: 1px solid #000000;
+        padding-right: 20px;
+    }
+
+    .nav-item:last-child {
+        border-right: none; /* Menghapus garis pembatas pada elemen terakhir */
+    }
+        .btn-signup {
+            background-color: #000; 
+            color: #fff; 
+            border-radius: 20px; 
+        }
+        .btn-signup:hover {
+            background-color: #333; 
+        }
+        .search-icon {
+            font-size: 1.2rem; 
+            line-height: 1; 
+            color: #000; 
+        }
+        .border-left .nav-link {
+            border-left: 1px solid #000; 
+            padding-left: 3rem; 
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-border {
+            border-right: 1px solid #000;
+            height: 40px; /* Sesuaikan dengan tinggi gambar */
+            margin-left: 20px; /* Atur jarak antara gambar dan garis */
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="">
+    <a class="navbar-brand" href="#">
+        <div class="logo-container">
+            <img src="logo-kn.png" style="width: 50px; height: auto;" alt="">
+            <div class="logo-border"></div> <!-- Tambahkan div untuk garis -->
+        </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">FAQ</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn my-2 my-sm-0 search-icon" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    <button class="btn btn-signup my-2 my-sm-0" type="button">Sign up</button>
+
+    </div>
+</nav>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Font Awesome for search icon (if needed) -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+</body>
+</html>
